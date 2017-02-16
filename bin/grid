@@ -37,7 +37,7 @@ SYSTEM=$2
 
 DOWNLOAD_KAFKA=http://www.us.apache.org/dist/kafka/0.10.0.1/kafka_2.10-0.10.0.1.tgz
 DOWNLOAD_YARN=http://archive.apache.org/dist/hadoop/common/hadoop-2.7.1/hadoop-2.7.1.tar.gz
-DOWNLOAD_ZOOKEEPER=http://archive.apache.org/dist/zookeeper/zookeeper-3.4.3/zookeeper-3.4.3.tar.gz
+DOWNLOAD_ZOOKEEPER=http://archive.apache.org/dist/zookeeper/zookeeper-3.4.8/zookeeper-3.4.8.tar.gz
 
 bootstrap() {
   echo "Bootstrapping the system..."
@@ -74,7 +74,7 @@ install_samza() {
 
 install_zookeeper() {
   mkdir -p "$DEPLOY_ROOT_DIR"
-  install zookeeper $DOWNLOAD_ZOOKEEPER zookeeper-3.4.3
+  install zookeeper $DOWNLOAD_ZOOKEEPER zookeeper-3.4.8
   cp "$DEPLOY_ROOT_DIR/zookeeper/conf/zoo_sample.cfg" "$DEPLOY_ROOT_DIR/zookeeper/conf/zoo.cfg"
 }
 
